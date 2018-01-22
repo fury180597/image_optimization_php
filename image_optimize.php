@@ -25,7 +25,7 @@ if(isset($_POST['post'])){
              $fileName = preg_replace('#[^a-z.0-9]#i', '', $pro_image); 
              $nwtourimg = explode(".", $fileName);
              if (!$pro_image_tmp) { // if file not chosen
-                echo "ERROR: An error occured (File size may be more than 5mb)";
+                echo "ERROR: Please browse for a file before clicking the upload button.";
                 exit();
             } else if($fileSize > 5242880) { // if file size is larger than 5 Megabytes
                 echo "ERROR: Your file was larger than 5 Megabytes in size.";
